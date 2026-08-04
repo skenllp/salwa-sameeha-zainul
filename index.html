@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Salwa · Sameeha · Zainul — Wedding Reception</title>
+<meta name="description" content="You are cordially invited to the Wedding Reception of Salwa TK & Sadiq Ali · Sameeha TK & Ajmal CP · Zainul Abid & Henna Salam. Taj Palace, Nariparamba.">
+
+<!-- Open Graph / WhatsApp / Instagram link preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:title" content="Salwa · Sameeha · Zainul — Wedding Reception">
+<meta property="og:description" content="You are cordially invited to the Wedding Reception of Salwa TK & Sadiq Ali · Sameeha TK & Ajmal CP · Zainul Abid & Henna Salam. Taj Palace, Nariparamba.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:secure_url" content="og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Salwa · Sameeha · Zainul Wedding Reception Invitation">
+
+<!-- Twitter Card (also used by some platforms) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Salwa · Sameeha · Zainul — Wedding Reception">
+<meta name="twitter:description" content="You are cordially invited to the Wedding Reception of Salwa TK & Sadiq Ali · Sameeha TK & Ajmal CP · Zainul Abid & Henna Salam. Taj Palace, Nariparamba.">
+<meta name="twitter:image" content="og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+
+<style>
+/* ============================================================
+   T&A — DESIGN TOKENS
+   ============================================================ */
+:root{
+  --ivory:#FCFAF6;
+  --gold:#D4AF37;
+  --gold-soft: rgba(212,175,55,0.35);
+  --beige:#F6F2EB;
+  --rose:#B76E79;
+  --charcoal:#2B2B2B;
+  --charcoal-soft: rgba(43,43,43,0.6);
+  --paper: #FEFDFB;
+  --line: rgba(43,43,43,0.12);
+
+  --display: 'Cormorant Garamond', serif;
+  --deco: 'Playfair Display', serif;
+  --body: 'Poppins', sans-serif;
+
+  --ease-lux: cubic-bezier(.16,.84,.44,1);
+  --dur-slow: 1.4s;
+  --dur-med: .9s;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:auto; height:100%;}
+body{
+  font-family: var(--body);
+  background: var(--beige);
+  color: var(--charcoal);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+img{max-width:100%; display:block;}
+button{font-family:inherit; cursor:pointer; background:none; border:none;}
+a{color:inherit; text-decoration:none;}
+::selection{background: var(--gold-soft); color:var(--charcoal);}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
+}
+
+/* ---------- shared paper texture ---------- */
+.paper-texture{
+  position:relative;
+}
+.paper-texture::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(212,175,55,0.05), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(183,110,121,0.05), transparent 45%);
+  pointer-events:none;
+}
+
+.eyebrow{
+  font-family: var(--body);
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--rose);
+  font-weight: 500;
+}
+
+.section-title{
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  color: var(--charcoal);
+  line-height: 1.1;
+}
+
+.divider-flourish{
+  width: 90px;
+  height: 22px;
+  margin: 18px auto;
+  opacity: .8;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.gold-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: clamp(12px,3vw,16px) clamp(20px,5vw,38px);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-family: var(--body);
+  font-size: clamp(10px,2.6vw,12px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(212,175,55,0));
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
+  transition: color .5s var(--ease-lux), box-shadow .5s var(--ease-lux), transform .3s var(--ease-lux);
+  box-shadow: 0 0 0 rgba(212,175,55,0);
+}
+.gold-btn::before{
+  content:"";
+  position:absolute; inset:0;
+  background: var(--gold);
+  transform: translateY(101%);
+  transition: transform .5s var(--ease-lux);
+  z-index:0;
+}
+.gold-btn span{position:relative; z-index:1;}
+.gold-btn:hover::before{ transform: translateY(0); }
+.gold-btn:hover{ color: var(--ivory); box-shadow: 0 8px 30px rgba(212,175,55,0.35); transform: translateY(-2px);}
+
+/* ============================================================
+   OPENING SCREEN
+   ============================================================ */
+#opening{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #1a0e08;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* Prevent any body scroll while opening is active */
+  overflow: hidden;
+  /* Safe area insets for notched phones */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+#opening-video{
+  position: absolute;
+  /* Extend slightly beyond safe-area to ensure full bleed */
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+
+  /* Portrait phones: anchor to top so the top of the video is always visible */
+  object-fit: cover;
+  object-position: center center;
+
+  /* GPU compositing — smoother on low-end devices */
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ── Portrait mobile (≤ 480 px wide) ─────────────────────── */
+/* Most opening videos are 9:16 portrait; anchor top so faces
+   are never cropped on short/wide phone screens. */
+@media (max-width: 480px) and (orientation: portrait){
+  #opening-video{
+    object-position: center top;
+  }
+}
+
+/* ── Landscape mobile / tablet ────────────────────────────── */
+@media (orientation: landscape) and (max-height: 500px){
+  #opening-video{
+    object-position: center center;
+  }
+}
+
+/* ── Very wide desktop (ultra-wide monitors) ──────────────── */
+@media (min-width: 1800px){
+  #opening-video{
+    object-position: center 20%;
+  }
+}
+@keyframes open-hint-pulse{
+  0%, 100% { opacity: 1;   transform: translateY(0);   }
+  50%       { opacity: 0.5; transform: translateY(4px); }
+}
+@keyframes ring-pulse{
+  0%  { opacity: 0.8; transform: scale(1);   }
+  70% { opacity: 0;   transform: scale(1.6); }
+  100%{ opacity: 0;   transform: scale(1.6); }
+}
+
+/* tap-to-open overlay */
+#tap-hint{
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Thin gold dot above label */
+#tap-hint .tap-dot{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(212,175,55,0.9);
+  animation: dot-pulse 2.2s ease-in-out infinite;
+}
+@keyframes dot-pulse{
+  0%,100%{ transform:scale(1);   opacity:.9; }
+  50%     { transform:scale(1.6); opacity:.4; }
+}
+
+/* Label */
+#tap-hint .tap-label{
+  font-family: var(--body);
+  font-size: clamp(10px, 2.4vw, 11px);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(252,250,246,0.82);
+  text-shadow: 0 1px 12px rgba(0,0,0,0.7);
+  animation: open-hint-pulse 2.4s ease-in-out infinite;
+}
+
+/* Thin ring around the dot */
+#tap-hint .tap-ring{
+  position: absolute;
+  width: clamp(60px,16vw,80px);
+  height: clamp(60px,16vw,80px);
+  border-radius: 50%;
+  border: 1px solid rgba(212,175,55,0.35);
+  animation: ring-pulse 2.2s ease-out infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* wrapper to hold the dot + ring together */
+#tap-hint .tap-icon{
+  position: relative;
+  width: clamp(60px,16vw,80px);
+  height: clamp(60px,16vw,80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tap-hint.hidden{ opacity: 0; pointer-events: none; }
+
+/* landscape: just reduce gap slightly */
+@media (orientation: landscape) and (max-height: 500px){
+  #tap-hint{ gap: 10px; }
+}
+#petal-layer{
+  position: fixed; inset:0;
+  pointer-events:none;
+  z-index: 5;
+  overflow:hidden;
+}
+.petal{
+  position:absolute;
+  top:-5%;
+  opacity:.55;
+  will-change: transform;
+}
+
+/* ============================================================
+   NAV / MUSIC CONTROL
+   ============================================================ */
+#music-control{
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 1000;
+  width: 54px; height:54px;
+  border-radius:50%;
+  background: rgba(254,253,251,0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gold-soft);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 10px 30px rgba(43,43,43,0.12);
+  opacity:0;
+  transform: translateY(20px);
+  transition: opacity .6s var(--ease-lux), transform .6s var(--ease-lux), box-shadow .3s ease;
+}
+#music-control.visible{ opacity:1; transform: translateY(0); }
+#music-control:hover{ box-shadow: 0 14px 36px rgba(212,175,55,0.3); }
+#music-control svg{ width:20px; height:20px; }
+/* shown while autoplay hasn't succeeded yet, to prompt a manual tap */
+#music-control.needs-tap{ animation: musicPulse 1.6s ease-in-out infinite; }
+@keyframes musicPulse{
+  0%, 100% { box-shadow: 0 10px 30px rgba(43,43,43,0.12); }
+  50% { box-shadow: 0 0 0 10px rgba(212,175,55,0.25); }
+}
+.disc{
+  animation: spin 6s linear infinite;
+  animation-play-state: paused;
+  transform-origin:center;
+}
+.disc.spinning{ animation-play-state: running; }
+@keyframes spin{ to{ transform: rotate(360deg);} }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero{
+  position:relative;
+  overflow:hidden;
+}
+.hero-flowers{
+  position:absolute;
+  width: 100%; height:100%;
+  top:0; left:0;
+  pointer-events:none;
+  opacity:.9;
+}
+.hero-flowers svg{ position:absolute; }
+.fl-top-left{ top:-40px; left:-40px; width:260px; }
+.fl-top-right{ top:-30px; right:-50px; width:220px; transform: scaleX(-1); }
+.fl-bottom-left{ bottom:-40px; left:-30px; width:220px; }
+.fl-bottom-right{ bottom:-50px; right:-40px; width:260px; transform: scaleX(-1); }
+
+.hero-inner{ position:relative; z-index:2; max-width:640px; }
+.hero-eyebrow{
+  font-family:var(--body);
+  letter-spacing:0.4em;
+  text-transform:uppercase;
+  font-size:11px;
+  color:var(--rose);
+  margin-bottom: 22px;
+}
+.hero-names{
+  font-family: var(--display);
+  font-weight:500;
+  font-size: clamp(3.4rem, 12vw, 6.4rem);
+  line-height: 0.95;
+  color:var(--charcoal);
+}
+.hero-heart{
+  display:block;
+  color: var(--gold);
+  font-size: 0.32em;
+  margin: 14px 0;
+  font-family: var(--deco);
+}
+.hero-sub{
+  font-family: var(--body);
+  font-weight:300;
+  font-size:13px;
+  letter-spacing:0.05em;
+  color: var(--charcoal-soft);
+  margin: 26px auto 4px;
+  max-width: 420px;
+  line-height:1.9;
+}
+.hero-msg{
+  font-family: var(--display);
+  font-style:italic;
+  font-size: 1.3rem;
+  color: var(--charcoal);
+  margin: 18px auto 34px;
+  max-width: 460px;
+  line-height:1.5;
+}
+.hero-cta-label{
+  font-family: var(--deco);
+  font-size: 1.6rem;
+  color: var(--rose);
+  margin-bottom: 8px;
+}
+.hero-meta{
+  margin-top: 40px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  font-family: var(--body);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+}
+.hero-meta strong{ font-weight:500; }
+.hero-meta .venue{ color:var(--charcoal-soft); font-weight:300; }
+
+
+.scroll-cue{
+  position:absolute;
+  bottom: 30px; left:50%;
+  transform: translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  font-size:11px;
+  font-weight: 500;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color: var(--charcoal);
+}
+.scroll-cue .line{
+  width:2px; height:44px;
+  background: linear-gradient(var(--gold), transparent);
+  animation: scroll-line 2s ease-in-out infinite;
+}
+@keyframes scroll-line{
+  0%{ transform: scaleY(0); transform-origin:top;}
+  50%{ transform: scaleY(1); transform-origin:top;}
+  50.01%{ transform-origin:bottom;}
+  100%{ transform: scaleY(0); transform-origin:bottom;}
+}
+
+/* ============================================================
+   GENERIC SECTION
+   ============================================================ */
+.section{
+  position: relative;
+  padding: 130px 0;
+}
+.section-head{
+  text-align:center;
+  margin-bottom: 70px;
+}
+
+/* ============================================================
+   COUPLE
+   ============================================================ */
+.couple-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+@media(min-width: 720px){
+  .couple-grid{ grid-template-columns: 1fr auto 1fr; align-items:center; }
+}
+.couple-card{
+  text-align:center;
+  opacity:0;
+  transform: translateY(50px);
+}
+.portrait-frame{
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 4/5;
+  margin: 0 auto 26px;
+  border-radius: 4px;
+  overflow:hidden;
+  position:relative;
+  background: var(--beige);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 50px rgba(43,43,43,0.1);
+}
+.portrait-frame img{ width:100%; height:100%; object-fit:cover; }
+.portrait-fallback{
+  position:absolute; inset:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap: 14px;
+  color: var(--gold);
+}
+.portrait-fallback svg{ width:56px; opacity:.7; }
+.portrait-fallback span{
+  font-family: var(--body);
+  font-size:10px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color: var(--charcoal-soft);
+}
+.couple-name{
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight:500;
+}
+.couple-role{
+  font-family: var(--body);
+  font-size: 11px;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color: var(--rose);
+  margin-top:6px;
+}
+.couple-amp{
+  font-family: var(--deco);
+  font-size: 2.6rem;
+  color: var(--gold);
+  text-align:center;
+}
+
+/* ============================================================
+   LOVE STORY (timeline)
+   ============================================================ */
+.timeline{
+  position:relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:9px; top:6px; bottom:6px;
+  width:1px;
+  background: linear-gradient(var(--gold-soft), var(--gold), var(--gold-soft));
+}
+.tl-item{
+  position:relative;
+  padding-bottom: 64px;
+  opacity:0;
+  transform: translateX(-30px);
+}
+.tl-item:last-child{ padding-bottom:0; }
+.tl-dot{
+  position:absolute; left:-40px; top:4px;
+  width:19px; height:19px;
+  border-radius:50%;
+  background: var(--ivory);
+  border: 1px solid var(--gold);
+}
+.tl-dot::after{
+  content:"";
+  position:absolute; inset:5px;
+  border-radius:50%;
+  background: var(--gold);
+}
+.tl-date{
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color: var(--rose);
+  margin-bottom: 8px;
+}
+.tl-title{
+  font-family: var(--display);
+  font-size: 1.7rem;
+  font-weight:500;
+  margin-bottom: 8px;
+}
+.tl-desc{
+  font-family: var(--body);
+  font-weight:300;
+  font-size: 14px;
+  line-height:1.8;
+  color: var(--charcoal-soft);
+  max-width: 500px;
+}
+.tl-photo{
+  margin-top: 18px;
+  width: 220px;
+  aspect-ratio: 4/3;
+  border-radius: 4px;
+  overflow:hidden;
+  border: 1px solid var(--line);
+  background: var(--beige);
+}
+.tl-photo img{ width:100%; height:100%; object-fit:cover; }
+
+/* ============================================================
+   COUNTDOWN CARD (standalone section)
+   ============================================================ */
+.countdown-card{
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 56px 30px;
+  text-align:center;
+  box-shadow: 0 30px 70px rgba(43,43,43,0.08);
+  opacity:0;
+  transform: scale(.95);
+}
+.countdown-grid{
+  display:flex;
+  justify-content:center;
+  gap: 26px;
+  margin-top: 34px;
+  flex-wrap:wrap;
+}
+.cd-unit{ text-align:center; }
+.cd-num{
+  font-family: var(--display);
+  font-size: 3rem;
+  font-weight:500;
+  color:var(--charcoal);
+  line-height:1;
+}
+.cd-label{
+  font-family: var(--body);
+  font-size:10px;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color: var(--rose);
+  margin-top: 10px;
+}
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+.details-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media(min-width:760px){
+  .details-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+.detail-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 44px 28px;
+  text-align:center;
+  opacity:0;
+  transform: translateY(40px);
+  transition: box-shadow .4s ease, transform .4s ease;
+}
+.detail-card:hover{ box-shadow: 0 20px 50px rgba(212,175,55,0.15); transform: translateY(-6px); }
+.detail-icon{ color: var(--gold); margin-bottom:18px; }
+.detail-icon svg{ width:30px; height:30px; margin:0 auto; }
+.detail-label{
+  font-family: var(--body);
+  font-size:10px;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color: var(--rose);
+  margin-bottom: 12px;
+}
+.detail-main{
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight:500;
+}
+.detail-sub{
+  font-family: var(--body);
+  font-weight:300;
+  font-size: 13px;
+  color: var(--charcoal-soft);
+  margin-top: 6px;
+}
+.map-cta{ text-align:center; margin-top: 50px; }
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.masonry{
+  columns: 2;
+  column-gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media(min-width:760px){ .masonry{ columns:3; } }
+.masonry-item{
+  break-inside: avoid;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  overflow:hidden;
+  position:relative;
+  cursor: zoom-in;
+  background: var(--beige);
+  border: 1px solid var(--line);
+  opacity:0;
+  transform: translateY(30px);
+}
+.masonry-item img{
+  width:100%; display:block;
+  transition: transform .7s var(--ease-lux);
+}
+.masonry-item:hover img{ transform: scale(1.06); }
+.masonry-fallback{
+  aspect-ratio: 1/1.15;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:10px; color: var(--gold);
+}
+.masonry-fallback svg{ width:34px; opacity:.6; }
+.masonry-fallback span{
+  font-family:var(--body); font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:var(--charcoal-soft);
+}
+.masonry-overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 60%, rgba(43,43,43,0.5));
+  opacity:0; transition: opacity .4s ease;
+  display:flex; align-items:flex-end; justify-content:center; padding-bottom:16px;
+}
+.masonry-item:hover .masonry-overlay{ opacity:1; }
+.masonry-overlay svg{ width:22px; color: var(--ivory); }
+
+/* lightbox */
+#lightbox{
+  position:fixed; inset:0; z-index:200;
+  background: rgba(43,43,43,0.94);
+  display:none;
+  align-items:center; justify-content:center;
+  padding: 40px;
+}
+#lightbox.open{ display:flex; }
+#lightbox img{
+  max-width: 100%; max-height: 82vh;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+#lightbox .lb-close, #lightbox .lb-nav{
+  position:absolute;
+  color: var(--ivory);
+  width:46px; height:46px;
+  border-radius:50%;
+  border: 1px solid rgba(255,255,255,0.3);
+  display:flex; align-items:center; justify-content:center;
+  transition: background .3s ease;
+}
+#lightbox .lb-close:hover, #lightbox .lb-nav:hover{ background: rgba(255,255,255,0.1); }
+#lightbox .lb-close{ top:24px; right:24px; }
+#lightbox .lb-prev{ left:24px; top:50%; transform:translateY(-50%); }
+#lightbox .lb-next{ right:24px; top:50%; transform:translateY(-50%); }
+#lightbox svg{ width:18px; height:18px; }
+
+/* ============================================================
+   RSVP
+   ============================================================ */
+.rsvp-wrap{
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 56px 34px;
+  box-shadow: 0 30px 70px rgba(43,43,43,0.08);
+}
+.form-row{ margin-bottom: 24px; }
+.form-row label{
+  display:block;
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color: var(--rose);
+  margin-bottom: 10px;
+}
+.form-row input, .form-row select, .form-row textarea{
+  width:100%;
+  padding: 14px 4px;
+  border:none;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  font-family: var(--body);
+  font-size: 14px;
+  color: var(--charcoal);
+  outline:none;
+  transition: border-color .3s ease;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus{
+  border-color: var(--gold);
+}
+.form-row textarea{ resize: vertical; min-height: 90px; }
+.attend-toggle{
+  display:flex; gap:14px; flex-wrap: wrap;
+}
+.attend-toggle button{
+  flex:1;
+  min-width: 140px;
+  padding: clamp(10px,2.6vw,14px);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: var(--body);
+  font-size: clamp(10px,2.4vw,12px);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color: var(--charcoal-soft);
+  transition: all .3s ease;
+}
+.attend-toggle button.active{
+  border-color: var(--gold);
+  color: var(--charcoal);
+  background: rgba(212,175,55,0.08);
+}
+.rsvp-actions{
+  display:flex; flex-direction:column; gap:14px; margin-top: 34px;
+  align-items:center;
+}
+.whatsapp-link{
+  font-family: var(--body);
+  font-size: clamp(10px,2.4vw,12px);
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color: var(--rose);
+  border-bottom: 1px solid var(--rose);
+  padding-bottom: 2px;
+  text-align: center;
+  transition: opacity .3s ease;
+}
+.whatsapp-link:hover{ opacity:.65; }
+.rsvp-msg{
+  text-align:center;
+  font-family: var(--display);
+  font-style:italic;
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-top: 20px;
+  display:none;
+}
+.rsvp-msg.show{ display:block; }
+
+/* ============================================================
+   WISHES
+   ============================================================ */
+.wishes-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media(min-width:700px){ .wishes-grid{ grid-template-columns: 1fr 1fr; } }
+.wish-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 26px 24px;
+  opacity:0;
+  transform: translateY(24px);
+  position:relative;
+}
+.wish-quote{
+  color: var(--gold);
+  font-family: var(--deco);
+  font-size: 1.8rem;
+  line-height: 0.6;
+}
+.wish-msg{
+  font-family: var(--body);
+  font-weight:300;
+  font-size: 13.5px;
+  line-height:1.8;
+  color: var(--charcoal);
+  margin: 10px 0 16px;
+}
+.wish-name{
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight:500;
+}
+.wish-date{
+  font-family: var(--body);
+  font-size: 10px;
+  color: var(--charcoal-soft);
+  letter-spacing: 0.1em;
+  margin-top:2px;
+}
+.wishes-empty{
+  text-align:center;
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--charcoal-soft);
+  font-size: 1.1rem;
+  grid-column: 1/-1;
+}
+
+/* ============================================================
+   FAMILY & REGARDS
+   ============================================================ */
+.regards-section{
+  background: var(--paper);
+  padding: 80px 0 70px;
+  text-align: center;
+  position: relative;
+}
+.regards-section::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(212,175,55,0.06), transparent 50%),
+    radial-gradient(circle at 85% 50%, rgba(183,110,121,0.06), transparent 50%);
+  pointer-events:none;
+}
+.regards-family{
+  margin-bottom: 36px;
+}
+.regards-from{
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 14px;
+}
+.regards-name-primary{
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.4;
+}
+.regards-parents{
+  font-family: var(--body);
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--charcoal-soft);
+  margin-top: 8px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+.regards-address{
+  font-family: var(--body);
+  font-size: 12px;
+  color: var(--charcoal-soft);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+.regards-divider{
+  width: 60px;
+  height: 1px;
+  background: var(--gold-soft);
+  margin: 32px auto;
+}
+.regards-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.regards-item{
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--charcoal);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.regards-item-num{
+  font-family: var(--body);
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rose);
+  min-width: 22px;
+  text-align: right;
+  flex-shrink: 0;
+}
+@media(max-width:600px){
+  .regards-section{ padding: 56px 0 50px; }
+  .regards-name-primary{ font-size: 1.3rem; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+/* ============================================================
+   BANNER SECTIONS — full artwork sections built from the
+   supplied reference images (hero, couple, calligraphy, map, footer)
+   ============================================================ */
+.banner-section{
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  background: var(--ivory);
+}
+.banner-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.banner-overlay-card{
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 6%;
+}
+.map-overlay-card{ bottom: 5%; }
+
+/* Full-image clickable map link */
+.map-fullclick{
+  display: block;
+  position: relative;
+  line-height: 0;
+  cursor: pointer;
+}
+.map-fullclick::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(212,175,55,0);
+  transition: background 0.35s ease;
+  pointer-events: none;
+}
+.map-fullclick:hover::after,
+.map-fullclick:focus::after{
+  background: rgba(212,175,55,0.08);
+}
+.map-fullclick:focus{
+  outline: none;
+}
+/* Touch ripple hint */
+.map-fullclick:active::after{
+  background: rgba(212,175,55,0.18);
+  transition: none;
+}
+
+#footer{
+  background: var(--beige);
+  color: var(--charcoal);
+  text-align:center;
+  position:relative;
+  line-height: 0;
+  font-size: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#footer .banner-img{
+  vertical-align: bottom;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.footer-credit{
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color: rgba(43,43,43,0.55);
+  z-index: 3;
+  white-space: nowrap;
+  line-height: 1;
+}
+.detail-divider{
+  width: 90px;
+  height: 1px;
+  background: var(--gold-soft);
+  margin: 16px auto 0;
+}
+
+/* utility fade elements used by GSAP */
+.will-fade{ opacity:0; }
+
+/* ============================================================
+   MOBILE RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px){
+
+  /* container */
+  .container{ padding: 0 18px; }
+
+  /* sections */
+  .section{ padding: 70px 0; }
+  .section-head{ margin-bottom: 44px; }
+  .section-title{ font-size: clamp(1.9rem, 8vw, 2.6rem); }
+
+  /* hero */
+  .fl-top-left{ width: 150px; top: -20px; left: -20px; }
+  .fl-top-right{ width: 130px; top: -16px; right: -24px; }
+  .fl-bottom-left{ width: 130px; bottom: -20px; left: -16px; }
+  .fl-bottom-right{ width: 150px; bottom: -24px; right: -20px; }
+
+  .hero-names{ font-size: clamp(2.8rem, 14vw, 4rem); }
+  .hero-sub{ font-size: 12px; margin-top: 18px; }
+  .hero-msg{ font-size: 1.1rem; margin: 14px auto 24px; }
+  .hero-meta{ margin-top: 28px; font-size: 12px; }
+
+  /* couple */
+  .couple-grid{ gap: 36px; }
+  .couple-amp{ font-size: 2rem; }
+  .couple-name{ font-size: 1.7rem; }
+  .portrait-frame{ max-width: 220px; }
+
+  /* timeline */
+  .timeline{ padding-left: 32px; }
+  .tl-dot{ left: -32px; width: 16px; height: 16px; }
+  .tl-title{ font-size: 1.4rem; }
+  .tl-desc{ font-size: 13px; }
+  .tl-photo{ width: 100%; }
+  .tl-item{ padding-bottom: 44px; }
+
+  /* countdown card */
+  .countdown-card{ padding: 36px 18px; }
+  .countdown-grid{ gap: 16px; }
+  .cd-num{ font-size: 2.2rem; }
+  .cd-label{ font-size: 9px; }
+
+  /* detail countdown */
+  .details-countdown-wrap{ padding: 22px 16px 20px; margin-bottom: 28px; }
+  .details-countdown-grid{ gap: 0; }
+  .dct-unit{ padding: 0 6px; }
+  .dct-num{ font-size: 1.8rem; }
+  .dct-label{ font-size: 8px; letter-spacing: 0.12em; }
+
+  /* couples strip */
+  .details-couples-strip{ padding: 28px 16px 24px; margin-bottom: 32px; }
+  .dcs-couples-row{ flex-direction: column; align-items: center; }
+  .dcs-couple{ max-width: 100%; width: 100%; }
+  .dcs-couple:not(:last-child)::after{ right: auto; top: auto; bottom: 0; left: 10%; right: 10%; width: auto; height: 1px; }
+
+  /* detail cards */
+  .details-grid{ gap: 16px; }
+  .detail-card{ padding: 32px 20px; }
+  .detail-main{ font-size: 1.3rem; }
+
+  /* gallery — single column on very small screens */
+  .masonry{ columns: 1; }
+
+  /* RSVP */
+  .rsvp-wrap{ padding: 36px 18px; }
+  .attend-toggle{ flex-direction: column; gap: 10px; }
+
+  /* wishes */
+  .wish-card{ padding: 20px 16px; }
+
+  /* footer */
+  #footer{ padding: 60px 18px 30px; }
+  .footer-title{ font-size: 1.6rem; }
+  .footer-sub{ font-size: 12px; }
+
+  /* music button */
+  #music-control{ width: 46px; height: 46px; bottom: 18px; right: 18px; }
+
+  /* lightbox nav on mobile */
+  #lightbox{ padding: 16px; }
+  #lightbox .lb-prev{ left: 8px; }
+  #lightbox .lb-next{ right: 8px; }
+  #lightbox .lb-close{ top: 12px; right: 12px; }
+  #lightbox img{ max-height: 70vh; }
+}
+
+@media (max-width: 380px){
+  .hero-names{ font-size: clamp(2.4rem, 16vw, 3rem); }
+  .rsvp-wrap{ padding: 28px 14px; }
+}
+
+/* ============================================================
+   DETAILS SECTION — COUNTDOWN
+   ============================================================ */
+.details-countdown-wrap{
+  max-width: 760px;
+  margin: 0 auto 56px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 36px 24px 32px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(43,43,43,0.07);
+}
+.details-countdown-wrap .dct-eyebrow{
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 6px;
+}
+.details-countdown-wrap .dct-date{
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+.details-countdown-grid{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+}
+.dct-unit{
+  flex: 1;
+  text-align: center;
+  padding: 0 8px;
+  border-right: 1px solid var(--line);
+}
+.dct-unit:last-child{ border-right: none; }
+.dct-num{
+  font-family: var(--display);
+  font-size: clamp(2rem, 7vw, 3.2rem);
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1;
+}
+.dct-label{
+  font-family: var(--body);
+  font-size: clamp(8px, 1.8vw, 10px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-top: 8px;
+  white-space: nowrap;
+}
+.dct-done-msg{
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--gold);
+  display: none;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   DETAILS SECTION — COUPLES STRIP
+   ============================================================ */
+.details-couples-strip{
+  max-width: 860px;
+  margin: 0 auto 60px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 40px 32px 36px;
+  text-align: center;
+  box-shadow: 0 16px 44px rgba(43,43,43,0.07);
+}
+.dcs-invite-text{
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--charcoal-soft);
+  letter-spacing: 0.04em;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+.dcs-invite-text strong{
+  font-weight: 600;
+  color: var(--charcoal);
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+  font-style: normal;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+.dcs-invite-text em{
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--charcoal-soft);
+  display: block;
+  margin-bottom: 4px;
+}
+.dcs-couples-row{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.dcs-couple{
+  flex: 1;
+  min-width: 180px;
+  max-width: 260px;
+  padding: 24px 20px;
+  position: relative;
+}
+.dcs-couple:not(:last-child)::after{
+  content: "";
+  position: absolute;
+  right: 0; top: 20%; bottom: 20%;
+  width: 1px;
+  background: var(--line);
+}
+.dcs-couple-num{
+  font-family: var(--body);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 10px;
+  opacity: .75;
+}
+.dcs-couple-names{
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 2.8vw, 1.45rem);
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.3;
+}
+.dcs-couple-amp{
+  color: var(--gold);
+  display: block;
+  font-size: 0.75em;
+  margin: 4px 0;
+  font-family: var(--deco);
+}
+
+/* ── kill any white gap after footer ── */
+html, body { background: var(--beige); }
+footer#footer { display: block; margin: 0; padding: 0; }
+footer#footer img { display: block; }
+
+/* ── Prevent scroll-behind during opening video ── */
+body.opening-active {
+  overflow: hidden;
+  /* iOS Safari needs this too */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* Prevent pull-to-refresh on Android */
+  overscroll-behavior: none;
+}
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     OPENING SCREEN
+========================================================== -->
+<div id="opening">
+  <video
+    id="opening-video"
+    playsinline
+    webkit-playsinline
+    x5-playsinline
+    x5-video-player-type="h5"
+    x5-video-player-fullscreen="false"
+    preload="auto"
+    muted
+    poster="assets/video-poster.jpg"
+    disablePictureInPicture
+    disableRemotePlayback
+  >
+    <source src="opening-video.mp4" type="video/mp4">
+  </video>
+  <!-- tap to open overlay -->
+  <div id="tap-hint">
+    <div class="tap-icon">
+      <div class="tap-dot"></div>
+      <div class="tap-ring"></div>
+    </div>
+    <span class="tap-label">Tap to Open</span>
+  </div>
+</div>
+
+<!-- ambient petal layer -->
+<div id="petal-layer"></div>
+
+<!-- music control -->
+<button id="music-control" aria-label="Toggle music">
+  <svg class="disc" id="discIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="9" stroke="#D4AF37" stroke-width="1.3"/>
+    <circle cx="12" cy="12" r="2.4" fill="#D4AF37"/>
+  </svg>
+</button>
+
+<!-- =========================================================
+     MAIN SITE
+========================================================== -->
+<div id="site">
+
+  <!-- HERO -->
+  <section id="hero" class="banner-section">
+    <img class="banner-img" src="assets/hero-bismillah.jpg" alt="Thooba &amp; Anfal wedding invitation">
+
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </section>
+
+  <!-- CALLIGRAPHY -->
+  <section class="banner-section" id="calligraphy">
+    <img class="banner-img" src="assets/calligraphy.jpg" alt="A special day awaits">
+  </section>
+
+  <!-- COUPLE CARD -->
+  <section class="banner-section" id="couple-card">
+    <img class="banner-img" src="assets/couple-card.jpg" alt="Zainul Abid &amp; Henna Abdul Salam">
+  </section>
+
+  <!-- DETAILS -->
+  <section class="section paper-texture" id="details">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Join Us</div>
+        <h2 class="section-title">Wedding Details</h2>
+        <div class="detail-divider"></div>
+      </div>
+
+      <!-- COUNTDOWN -->
+      <div class="details-countdown-wrap" data-fade>
+        <div class="dct-eyebrow">Counting down to the celebration</div>
+        <div class="dct-date">Sunday, 13 September 2026 &nbsp;·&nbsp; 11:00 AM</div>
+        <div class="details-countdown-grid">
+          <div class="dct-unit">
+            <div class="dct-num" id="dct-days">--</div>
+            <div class="dct-label">Days</div>
+          </div>
+          <div class="dct-unit">
+            <div class="dct-num" id="dct-hours">--</div>
+            <div class="dct-label">Hours</div>
+          </div>
+          <div class="dct-unit">
+            <div class="dct-num" id="dct-mins">--</div>
+            <div class="dct-label">Minutes</div>
+          </div>
+          <div class="dct-unit">
+            <div class="dct-num" id="dct-secs">--</div>
+            <div class="dct-label">Seconds</div>
+          </div>
+        </div>
+        <div class="dct-done-msg" id="dctDoneMsg">The celebration has begun — welcome!</div>
+      </div>
+
+      <!-- COUPLES STRIP -->
+      <!-- <div class="details-couples-strip" data-fade>
+        <div class="dcs-invite-text">
+          <strong>Mr. Hamza TK &amp; Mrs. Nasheela</strong>
+          <em>Thiruvakalathil House, Thandilam</em>
+          cordially invite you and your family to grace the Wedding Reception
+          celebrating the joyous marriages of their beloved children:
+        </div>
+        <div class="dcs-couples-row">
+          <div class="dcs-couple">
+            <div class="dcs-couple-num">I</div>
+            <div class="dcs-couple-names">
+              Salwa TK
+              <span class="dcs-couple-amp">&amp;</span>
+              Sadiq Ali
+            </div>
+          </div>
+          <div class="dcs-couple">
+            <div class="dcs-couple-num">II</div>
+            <div class="dcs-couple-names">
+              Sameeha TK
+              <span class="dcs-couple-amp">&amp;</span>
+              Ajmal CP
+            </div>
+          </div>
+          <div class="dcs-couple">
+            <div class="dcs-couple-num">III</div>
+            <div class="dcs-couple-names">
+              Zainul Abid
+              <span class="dcs-couple-amp">&amp;</span>
+              Henna Salam
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- DATE / TIME / VENUE CARDS -->
+      <div class="details-grid">
+        <div class="detail-card" data-fade>
+          <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#D4AF37" stroke-width="1.3"/><path d="M3 10H21" stroke="#D4AF37" stroke-width="1.3"/><path d="M8 3V7M16 3V7" stroke="#D4AF37" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          <div class="detail-label">Date</div>
+          <div class="detail-main" id="detailDate">Sunday</div>
+          <div class="detail-sub" id="detailDateSub">13 September 2026</div>
+        </div>
+        <div class="detail-card" data-fade>
+          <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D4AF37" stroke-width="1.3"/><path d="M12 7V12L15.5 14" stroke="#D4AF37" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          <div class="detail-label">Time</div>
+          <div class="detail-main" id="detailTime">11:00 AM</div>
+          <div class="detail-sub">Onwards</div>
+        </div>
+        <div class="detail-card" data-fade>
+          <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 19 14.6 19 9.5C19 5.36 15.64 2 12 2C8.36 2 5 5.36 5 9.5C5 14.6 12 22 12 22Z" stroke="#D4AF37" stroke-width="1.3"/><circle cx="12" cy="9.5" r="2.5" stroke="#D4AF37" stroke-width="1.3"/></svg></div>
+          <div class="detail-label">Venue</div>
+          <div class="detail-main" id="detailVenue">Taj Palace</div>
+          <div class="detail-sub" id="detailVenueSub">Nariparamba</div>
+        </div>
+      </div>
+      <div class="map-cta" data-fade>
+        <a class="gold-btn" id="mapLink" href="#" target="_blank" rel="noopener"><span>View Location</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION / MAP -->
+  <section class="banner-section" id="location">
+    <a id="mapLink2" href="#" target="_blank" rel="noopener" aria-label="View venue location in Google Maps" class="map-fullclick">
+      <img class="banner-img" src="assets/map.jpg" alt="Taj Palace Nariparamba location map">
+    </a>
+  </section>
+
+  <!-- FAMILY & REGARDS -->
+  <!-- <section class="regards-section" id="regards">
+    <div class="container">
+      <div class="regards-family will-fade">
+        <div class="regards-from">With blessings from</div>
+        <div class="regards-name-primary" id="regardsFather">Mr. Hamza TK</div>
+        <div class="regards-name-primary">&amp; <span id="regardsMother">Mrs. Nasheela</span></div>
+        <div class="regards-address" id="regardsAddress">Thiruvakalathil House, Thandilam</div>
+      </div>
+      <div class="regards-divider"></div>
+      <div class="regards-parents will-fade">
+        <div class="regards-from" style="margin-bottom:10px;">Celebrating the marriages of their beloved children</div>
+      </div>
+      <div class="regards-list" id="regardsList"> -->
+        <!-- populated by JS -->
+      <!-- </div>
+    </div>
+  </section> -->
+
+</div>
+
+<!-- FOOTER -->
+<footer id="footer" class="banner-section">
+  <img class="banner-img" src="assets/footer.jpg" alt="Thank you for celebrating with us">
+  <div class="footer-credit">Made with ♡ by SKEN LLP</div>
+</footer>
+
+<audio id="bgMusic" src="assets/wedding-song.mp3" loop preload="auto"></audio>
+
+<script>
+/* ============================================================
+   CONFIGURATION
+   Edit this single object to re-theme the entire invitation.
+   ============================================================ */
+window.WEDDING_CONFIG = {
+  couple: {
+    brideName: "Henna Salam",
+    groomName: "Zainul Abid",
+    monogram: "Z&H",
+    tagline: "Wedding Reception"
+  },
+  family: {
+    groomFather: "Mr. Hamza TK",
+    groomMother: "Mrs. Nasheela",
+    groomAddress: "Thiruvakalathil House, Thandilam",
+    regards: [
+      "Salwa TK & Sadiq Ali",
+      "Sameeha TK & Ajmal CP",
+      "Zainul Abid & Henna Salam"
+    ]
+  },
+  event: {
+    dateISO: "2026-09-13T11:00:00+05:30",
+    dateDisplay: "Sunday, 13 September 2026",
+    dayName: "Sunday",
+    dateShort: "13 September 2026",
+    time: "11:00 AM onwards",
+    venueName: "Taj Palace",
+    venueAddress: "Nariparamba",
+    googleMapsUrl: "https://maps.app.goo.gl/3BZwUuaSGrSYBHe19"
+  },
+  media: {
+    backgroundMusicUrl: "assets/wedding-song.mp3",
+    heroImage: "",
+    brideImage: "",
+    groomImage: "",
+    gallery: [
+      // { url: "https://...", caption: "" }
+    ]
+  },
+  loveStory: [
+    { title: "First Meeting", date: "", description: "Add your story here, or remove this milestone from the config.", image: "" },
+    { title: "Friendship", date: "", description: "Add your story here, or remove this milestone from the config.", image: "" },
+    { title: "Engagement", date: "", description: "Add your story here, or remove this milestone from the config.", image: "" },
+    { title: "Wedding Day", date: "13 September 2026", description: "The day our three families become one.", image: "" }
+  ],
+  rsvp: {
+    whatsappNumber: "919999999999" // digits only, country code first
+  },
+  colors: {
+    ivory: "#FCFAF6",
+    gold: "#D4AF37",
+    beige: "#F6F2EB",
+    rose: "#B76E79",
+    charcoal: "#2B2B2B"
+  }
+};
+</script>
+
+<script>
+(function(){
+  "use strict";
+  const CFG = window.WEDDING_CONFIG;
+
+  /* ---------------- populate config-driven text ---------------- */
+  const setText = (id, val) => { const el = document.getElementById(id); if(el && val) el.textContent = val; };
+  setText('openBride', CFG.couple.brideName);
+  setText('openGroom', CFG.couple.groomName);
+  setText('monogramText', CFG.couple.monogram);
+  setText('openTagline', CFG.couple.tagline);
+  setText('openDate', CFG.event.dateShort);
+  setText('heroBride', CFG.couple.brideName);
+  setText('heroGroom', CFG.couple.groomName);
+  setText('heroDate', CFG.event.dateDisplay);
+  setText('heroVenue', CFG.event.venueName + ', ' + CFG.event.venueAddress);
+  setText('brideName', CFG.couple.brideName);
+  setText('groomName', CFG.couple.groomName);
+  setText('detailDate', CFG.event.dayName);
+  setText('detailDateSub', CFG.event.dateShort);
+  setText('detailTime', CFG.event.time.split(' ')[0] + ' ' + (CFG.event.time.split(' ')[1]||''));
+  setText('detailVenue', CFG.event.venueName);
+  setText('detailVenueSub', CFG.event.venueAddress);
+  document.getElementById('mapLink').href = CFG.event.googleMapsUrl;
+  const mapLink2 = document.getElementById('mapLink2');
+  if(mapLink2) mapLink2.href = CFG.event.googleMapsUrl;
+  document.title = "Salwa · Sameeha · Zainul — Wedding Reception";
+
+  /* ---------------- populate family / regards ---------------- */
+  if(CFG.family){
+    setText('regardsGroom', CFG.couple.groomName);
+    setText('regardsFather', CFG.family.groomFather);
+    setText('regardsMother', CFG.family.groomMother);
+    setText('regardsAddress', CFG.family.groomAddress);
+    const list = document.getElementById('regardsList');
+    if(list && CFG.family.regards && CFG.family.regards.length){
+      list.innerHTML = CFG.family.regards.map((r, i) => {
+        const roman = ['I','II','III'][i] || (i+1);
+        return `<div class="regards-item"><span class="regards-item-num">${roman}</span>${r}</div>`;
+      }).join('');
+    }
+  }
+
+  /* ---------------- countdown (hero + detail section) ---------------- */
+  const target = new Date(CFG.event.dateISO).getTime();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tickCountdown(){
+    const now = Date.now();
+    const diff = Math.max(0, target - now);
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+
+    // Detail section countdown
+    const dctDays  = document.getElementById('dct-days');
+    const dctHours = document.getElementById('dct-hours');
+    const dctMins  = document.getElementById('dct-mins');
+    const dctSecs  = document.getElementById('dct-secs');
+    const dctDone  = document.getElementById('dctDoneMsg');
+    if(dctDays)  dctDays.textContent  = d;
+    if(dctHours) dctHours.textContent = pad(h);
+    if(dctMins)  dctMins.textContent  = pad(m);
+    if(dctSecs)  dctSecs.textContent  = pad(s);
+
+    // If event is past, show done message and hide grid
+    if(diff === 0 && dctDone){
+      dctDone.style.display = 'block';
+      const grid = document.querySelector('.details-countdown-grid');
+      if(grid) grid.style.display = 'none';
+    }
+  }
+  tickCountdown();
+  setInterval(tickCountdown, 1000);
+
+  /* ---------------- floating petals ---------------- */
+  const petalLayer = document.getElementById('petal-layer');
+  function makePetal(){
+    const p = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    p.setAttribute('viewBox','0 0 20 20');
+    p.setAttribute('class','petal');
+    p.innerHTML = `<path d="M10 1C13 5 19 7 19 12C19 16 15 19 10 19C5 19 1 16 1 12C1 7 7 5 10 1Z" fill="${Math.random() > 0.5 ? '#D4AF37' : '#B76E79'}" opacity="0.5"/>`;
+    const size = 8 + Math.random()*14;
+    p.style.width = size+'px';
+    p.style.height = size+'px';
+    p.style.left = Math.random()*100+'%';
+    petalLayer.appendChild(p);
+    const duration = 12 + Math.random()*10;
+    const drift = (Math.random()-0.5)*160;
+    if(window.gsap){
+      gsap.fromTo(p, { y: -40, rotate: 0, opacity:.6 }, {
+        y: window.innerHeight + 60,
+        x: `+=${drift}`,
+        rotate: 360*(Math.random() > 0.5 ? 1 : -1),
+        opacity: 0,
+        duration: duration,
+        ease: 'none',
+        onComplete: () => p.remove()
+      });
+    } else { p.remove(); }
+  }
+  let petalInterval = null;
+
+  /* ---------------- music control ---------------- */
+  const audio = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('music-control');
+  const disc = document.getElementById('discIcon');
+  let isPlaying = false;
+
+  audio.volume = 0;
+  audio.loop = true;
+
+  /* Fade the audio in over ~1.5 s to the target volume */
+  function fadeInMusic(targetVol){
+    targetVol = targetVol || 0.5;
+    audio.volume = 0;
+    const step = targetVol / 30;
+    const timer = setInterval(() => {
+      if(audio.volume + step >= targetVol){
+        audio.volume = targetVol;
+        clearInterval(timer);
+      } else {
+        audio.volume = Math.min(1, audio.volume + step);
+      }
+    }, 50);
+  }
+
+  /* Core play — called once from openInvitation after user gesture */
+  function startMusic(){
+    audio.play().then(() => {
+      isPlaying = true;
+      disc.classList.add('spinning');
+      musicBtn.classList.remove('needs-tap');
+      fadeInMusic(0.5);
+    }).catch((err) => {
+      console.warn('Music play blocked:', err.message);
+      isPlaying = false;
+      disc.classList.remove('spinning');
+      musicBtn.classList.add('needs-tap');
+    });
+  }
+
+  /* Toggle button (visible after opening screen) */
+  musicBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if(isPlaying){
+      audio.pause();
+      isPlaying = false;
+      disc.classList.remove('spinning');
+    } else {
+      audio.play().then(() => {
+        isPlaying = true;
+        disc.classList.add('spinning');
+        musicBtn.classList.remove('needs-tap');
+        fadeInMusic(0.5);
+      }).catch(() => {});
+    }
+  });
+
+  /* ---------------- opening → main reveal ---------------- */
+  const opening = document.getElementById('opening');
+  const openingVideo = document.getElementById('opening-video');
+  const tapHint = document.getElementById('tap-hint');
+
+  // Lock body scroll immediately so mobile users can't scroll behind the video
+  document.body.classList.add('opening-active');
+
+  let opened = false;
+
+  function onTouchEnd(e){
+    e.preventDefault(); // prevent the ghost click that follows touchend
+    openInvitation();
+  }
+
+  function openInvitation(){
+    if(opened) return;
+    opened = true;
+
+    // Hide the tap hint immediately
+    tapHint.classList.add('hidden');
+
+    // Remove all listeners immediately
+    document.removeEventListener('click', openInvitation);
+    document.removeEventListener('touchend', onTouchEnd);
+
+    // ── Start music (user gesture is active right now) ───────────────
+    startMusic();
+
+    // ── Play opening video (unmuted for its own audio) ───────────────
+    openingVideo.muted = false;
+
+    let started = false;
+    const fallbackTimer = setTimeout(() => {
+      if(!started) completeOpening();
+    }, 5000);
+
+    openingVideo.addEventListener('playing', function onPlaying(){
+      started = true;
+      clearTimeout(fallbackTimer);
+      openingVideo.removeEventListener('playing', onPlaying);
+    });
+
+    function attemptVideoPlay(){
+      return openingVideo.play().then(() => {
+        started = true;
+        clearTimeout(fallbackTimer);
+      });
+    }
+
+    attemptVideoPlay().catch(() => {
+      // Fallback: try muted (some browsers block unmuted autoplay)
+      openingVideo.muted = true;
+      openingVideo.load();
+      openingVideo.play().then(() => {
+        started = true;
+        clearTimeout(fallbackTimer);
+      }).catch(() => {
+        clearTimeout(fallbackTimer);
+        completeOpening();
+      });
+    });
+
+    // Show music toggle while video plays
+    document.getElementById('music-control').classList.add('visible');
+  }
+
+  // Tapping/clicking anywhere on the page opens the invitation and
+  // starts video + music. We use 'touchend' (not 'touchstart') because
+  // Android Chrome doesn't reliably treat touchstart as a completed
+  // gesture for audio autoplay — it can still turn into a scroll.
+  // touchend/click are the gestures both iOS Safari and Android Chrome
+  // reliably honor for unlocking audio.
+  document.addEventListener('click', openInvitation);
+  document.addEventListener('touchend', onTouchEnd, { passive: false });
+
+  // When video ends, fade out and reveal main site
+  openingVideo.addEventListener('ended', completeOpening);
+
+  function completeOpening(){
+    // Unlock body scroll now that the invitation is revealed
+    document.body.classList.remove('opening-active');
+    // Fade out the video's own audio as the screen transitions away
+    if(openingVideo && !openingVideo.paused){
+      const ramp = setInterval(() => {
+        if(openingVideo.volume > 0.05){
+          openingVideo.volume = Math.max(0, openingVideo.volume - 0.08);
+        } else {
+          openingVideo.volume = 0;
+          openingVideo.muted = true;
+          clearInterval(ramp);
+        }
+      }, 40);
+    }
+
+    if(window.gsap){
+      // Slight zoom-out on the video as it fades for a cinematic feel
+      gsap.to(opening, {
+        opacity: 0,
+        duration: 1.1,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          opening.style.display = 'none';
+          // Fully release memory once the screen is gone
+          openingVideo.pause();
+          openingVideo.src = '';
+          openingVideo.load();
+          initSiteAnimations();
+          document.getElementById('music-control').classList.add('visible');
+          petalInterval = setInterval(makePetal, 900);
+          for(let i = 0; i < 4; i++) setTimeout(makePetal, i * 250);
+        }
+      });
+      gsap.to('#opening-video', {
+        scale: 1.04,
+        duration: 1.1,
+        ease: 'power2.inOut'
+      });
+    } else {
+      opening.style.display = 'none';
+      openingVideo.pause();
+      openingVideo.src = '';
+      openingVideo.load();
+      initSiteAnimations();
+    }
+  }
+
+  /* ---------------- scroll animations (post-open) ---------------- */
+  let siteInited = false;
+  function initSiteAnimations(){
+    if(siteInited) return;
+    siteInited = true;
+
+    // Lenis smooth scroll
+    if(window.Lenis){
+      const lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+      function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+      if(window.gsap && window.ScrollTrigger){
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+        gsap.ticker.lagSmoothing(0);
+      }
+    }
+
+    if(!window.gsap || !window.ScrollTrigger) return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // hero fade-up sequence
+    gsap.timeline({ delay: .1 })
+      .to('#hero [data-fade]', { opacity:1, y:0, duration:1.1, stagger:.15, ease:'power3.out' });
+    gsap.set('#hero [data-fade]', { y: 30 });
+
+    // generic reveal for elements with data-fade elsewhere
+    document.querySelectorAll('.section [data-fade], .detail-card, .rsvp-wrap, .regards-section .will-fade, .regards-section .regards-divider, .regards-section .regards-item').forEach(el => {
+      gsap.fromTo(el, { opacity:0, y:40 }, {
+        opacity:1, y:0, duration:1, ease:'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      });
+    });
+
+    gsap.utils.toArray('.banner-overlay-card').forEach((el) => {
+      gsap.fromTo(el, { opacity:0, y:20 }, {
+        opacity:1, y:0, duration:1, ease:'power3.out',
+        scrollTrigger: { trigger: el, start:'top 90%' }
+      });
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
